@@ -10,10 +10,15 @@ function initMap() {
     map: map,
   });
 }
-const shoppingCart = [];
-document.getElementById("cartNumber").innerText = JSON.parse(
-  localStorage.getItem("cart")
-).length;
+
+const localCart = JSON.parse(localStorage.getItem("cart"));
+
+if (localCart) {
+  document.getElementById("cartNumber").innerText = JSON.parse(
+    localStorage.getItem("cart")
+  ).length;
+}
+
 try {
   window.initMap = initMap();
 } catch (error) {}

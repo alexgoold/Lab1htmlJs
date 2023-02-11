@@ -39,9 +39,11 @@ function displayCart() {
     const textDiv = document.createElement("div");
     const name = document.createElement("h5");
     const description = document.createElement("p");
+    const removeFromCart = document.createElement("button");
 
     listItem.classList.add("d-flex");
     imageDiv.classList.add("flex-shrink-0");
+    removeFromCart.classList.add("btn", "mt-0", "btn-dark");
 
     pizzaImage.src = pizza.image;
     pizzaImage.alt = pizza.description;
@@ -53,8 +55,18 @@ function displayCart() {
     name.innerText = pizza.name;
 
     description.innerText = pizza.description + " - " + pizza.price;
+    removeFromCart.innerText = "Remove";
 
-    textDiv.append(name, description);
+    removeFromCart.onclick = () => {
+      shoppingCart.pop(pizza);
+      localStorage.setItem("cart", JSON.stringify(shoppingCart));
+      document.getElementById("cartNumber").innerText = JSON.parse(
+        localStorage.getItem("cart")
+      ).length;
+      window.location.reload();
+    };
+
+    textDiv.append(name, description, removeFromCart);
     imageDiv.append(pizzaImage);
     listItem.append(imageDiv, textDiv);
     cartList.append(listItem);
@@ -95,7 +107,7 @@ function displayPizzas() {
     "Meatlovers",
     "Pepperoni, Sausage, Ham, Mozzarella, Barbeque sauce base",
     120,
-    "Images/Meatlovers-Pizza.webp"
+    "Images/Meatlovers-pizza.webp"
   );
   const Swedish = new Pizza(
     "A 'Good' Pizza",
@@ -121,6 +133,7 @@ function displayPizzas() {
     pizzaImage.src = pizza.image;
     pizzaImage.alt = pizza.description;
     pizzaImage.width = "100";
+    pizzaImage.height = "80";
     pizzaImage.classList.add("ms-5", "mt-5", "me-3", "ps-3");
 
     textDiv.classList.add("flex-grow-1", "me-4");

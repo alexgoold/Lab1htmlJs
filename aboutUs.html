@@ -8,31 +8,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="aboutUs.css" />
+    <link rel="preload" href="Images/menuBackground.webp" />
+    <link rel="stylesheet" href="landingPage.css" />
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
+      src="https://polyfill.io/v3/polyfill.min.js?features=default"
     ></script>
-
+    <!-- <script async defer src="mapscript.js"></script> -->
+    <script defer src="script.js"></script>
     <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      src="https://kit.fontawesome.com/6b7e2a0671.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script defer src="mapscript.js"></script>
-    <script src="https://kit.fontawesome.com/6b7e2a0671.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -49,40 +42,59 @@
         <li class="nav-item">
           <a class="nav-link text-bg-success" href="aboutUs.html">About us</a>
         </li>
-        <li class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex">
-              <div id="cart" class="d-none"></div>
-              <a href="cart.html"
-                style="text-decoration-color: #efcbafff"
-                class="cart mt-2 align-items-center position-relative d-inline-flex" aria-label="View your shopping cart">
-                <i class="fas fa fa-shopping-cart float-sm-none text-black"></i>
-                <span id="cartNumber" class="cart-basket mt-0 text-black">
-                  0
-                </span>
-              </a>
-            </li>
+        <li
+          class="nav-item px-3 text-uppercase mb-0 position-relative d-lg-flex"
+        >
+          <div id="cart" class="d-none"></div>
+          <a
+            href="cart.html"
+            style="text-decoration-color: #efcbafff"
+            class="cart mt-2 align-items-center position-relative d-inline-flex"
+            aria-label="View your shopping cart"
+          >
+            <i class="fas fa fa-shopping-cart float-sm-none text-black"></i>
+            <span id="cartNumber" class="cart-basket mt-0 text-black"> 0 </span>
+          </a>
+        </li>
       </ul>
     </header>
     <main>
       <div class="container">
         <div class="row text-center">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <h1 class="fw-bold text-bg-light mt-4">Where to find us!</h1>
-            <div id="mapPlacement">
-              <script
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBadlcnljeI8QF-cBVZ0v0O4F0xRTsgVHw&callback=initMap"
-              defer
-              async
-              ></script>
-              </script>
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h1 class="fw-bold text-bg-success mt-4">Where to find us!</h1>
+
+            <div class="bg-light">
+              <iframe
+                id="mapPlacement"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8537.92913800774!2d12.0276296!3d57.6572872!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff22e829e0e53%3A0xc8b04988e87c1653!2sPizzeria%20M%C3%B6lndal%20Corpus!5e0!3m2!1sen!2sse!4v1676126543284!5m2!1sen!2sse"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                frameborder="0"
+              ></iframe>
+              <!-- <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBadlcnljeI8QF-cBVZ0v0O4F0xRTsgVHw&callback=initMap"
+                defer
+                async
+              ></script> -->
             </div>
-            <p>Den andra delen är en "Om Oss"-sida där man ska kunna läsa om företaget, kontaktuppgifter och address.</p>
+            <p class="bg-danger text-light mt-2">
+              We are located at Gamla Torget in Kvarnby, Mölndal <br />
+              <br />
+              Phone: 0123 45 67 89 <br />
+              <br />
+              We make a commitment to delicious food, quality ingredients and
+              low prices. And we'll make any pizza you can think of! Just call
+              us and order something, we'll make it happen!
+            </p>
           </div>
-          <div class="col-3"></div>
+          <div class="col-2"></div>
         </div>
       </div>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
   </body>
 </html>
