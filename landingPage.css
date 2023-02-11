@@ -1,0 +1,29 @@
+/* CSS HEX 
+--international-orange-golden-gate-bridge: #c63421ff;
+--dark-olive-green: #52663cff;
+--tumbleweed: #d9a88eff;
+--desert-sand: #efcbafff;
+--vermilion: #ca4c33ff; */
+
+#navBar{
+    background-color: #efcbafff;
+}
+
+.nav-link{
+    color: #52663cff;
+}
+
+body{
+    background-image: url("Images/Background.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#pezzza{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
