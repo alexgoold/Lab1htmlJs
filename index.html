@@ -24,13 +24,6 @@
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
     ></script>
-
-    <!-- <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script> -->
     <script
       src="https://kit.fontawesome.com/6b7e2a0671.js"
       crossorigin="anonymous"
@@ -42,7 +35,7 @@
     <header>
       <ul id="navBar" class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link text-bg-success" href="index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="pizza.html">Pizza</a>
@@ -56,16 +49,18 @@
           <div id="cart" class="d-none"></div>
           <a
             href="cart.html"
+            style="text-decoration-color: #efcbafff"
             class="cart mt-2 align-items-center position-relative d-inline-flex"
             aria-label="View your shopping cart"
           >
-            <i class="fas fa fa-shopping-cart float-sm-none"></i>
-            <span id="cartNumber" class="cart-basket mt-0"> 0 </span>
+            <i class="fas fa-shopping-cart float-sm-none text-black"></i>
+            <span id="cartNumber" class="cart-basket mt-0 text-black"> 0 </span>
           </a>
         </li>
       </ul>
     </header>
     <main>
+      <h2 id="heading">Welcome to Pezzza Pizza Palace!</h2>
       <img
         id="pezzza"
         src="Images/Pizzeria-shop-front.webp"

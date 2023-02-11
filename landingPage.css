@@ -11,6 +11,7 @@
 
 .nav-link{
     color: #52663cff;
+        font-family: 'Lucida Sans';
 }
 
 body{
@@ -19,6 +20,12 @@ body{
     background-attachment: fixed;
     background-size: cover;
 
+}
+
+#heading{
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
 }
 
 #pezzza{
