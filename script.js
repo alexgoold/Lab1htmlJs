@@ -19,6 +19,11 @@ if (localCart) {
   }
 }
 
+if (!localCart) {
+  const cartHfre = document.getElementById("cartHref");
+  cartHfre.href = "#";
+}
+
 try {
   displayPizzas();
 } catch (error) {}
@@ -150,6 +155,7 @@ function displayPizzas() {
       document.getElementById("cartNumber").innerText = JSON.parse(
         localStorage.getItem("cart")
       ).length;
+      window.location.reload();
     };
 
     textDiv.append(name, description, addToCart);
@@ -163,6 +169,7 @@ function clearCart() {
   shoppingCart = [];
   localStorage.setItem("cart", JSON.stringify(shoppingCart));
   window.location.reload();
+  localStorage.removeItem("cart");
 }
 
 /* <li class="d-flex">

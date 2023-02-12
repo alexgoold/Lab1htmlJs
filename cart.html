@@ -15,7 +15,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="pizza.css" />
+    <link rel="stylesheet" href="landingPage.css" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -70,13 +70,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-2">
-            <button class="btn btn-dark m-4 px-2" onclick="clearCart()">Delete All</button>
+            <button id="deleteButton" class="btn btn-dark m-4 px-2" onclick="clearCart()">Delete All</button>
           </div>
           <div id="menu" class="col-8 mt-5 mb-0">
             <ul id="cartList" class="list-unstyled">
             </ul>
           </div>
-          <div class="col-2">
+          <div id="rightColumn" class="col-2">
             <div id="totalPrice" class="m-4">Total Price:</div>
             <button class="btn btn-dark m-4 px-2" onclick="clearCart()">Finalise and Pay</button>
             

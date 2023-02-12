@@ -35,3 +35,11 @@ body{
     margin-right: auto;
     display: block;
 }
+
+#pizzaList {
+    background-image: url("Images/menuBackground.webp");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    font-family: cursive;
+}
